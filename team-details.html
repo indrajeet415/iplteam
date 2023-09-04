@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Details</title>
+    <link rel="stylesheet" href="styles/team-details.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Team Details</h1>
+      <button id="add-player-button">Add Player</button>
+    </header>
+
+    <main>
+      <section id="team-details">
+        <!-- Team details will be displayed here -->
+      </section>
+
+      <section id="player-grid">
+        <!-- Player cards will be dynamically added here -->
+      </section>
+    </main>
+
+    <dialog id="player-modal">
+      <div>
+        <button id="close-player-modal">&times;</button>
+        <h2>Add Player</h2>
+        <form id="player-form">
+          <!-- Hide player ID input -->
+          <input type="hidden" id="player-id" />
+
+          <label for="player-name">Player Name:</label>
+          <input
+            type="text"
+            id="player-name"
+            name="playerName"
+            required
+          /><br />
+
+          <label for="player-photo">Photo URL:</label>
+          <input type="url" id="player-photo" name="photo" required /><br />
+
+          <label for="player-team">Team:</label>
+          <input type="text" id="player-team" name="from" disabled /><br />
+
+          <label for="player-price">Price:</label>
+          <input type="text" id="player-price" name="price" required /><br />
+
+          <label for="player-playing">Is Playing:</label>
+          <select id="player-playing" name="isPlaying">
+            <option value="true">Yes</option>
+            <option value="false">No</option></select
+          ><br />
+
+          <label for="player-role">Role:</label>
+          <input type="text" id="player-role" name="role" required /><br />
+
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </dialog>
+
+    <script src="javascript/team-details.js"></script>
+  </body>
+</html>
